@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>recipe_ingredients layout</title>
+</head>
+<body class="content">
+    <h2>Welcome to Express recipe_ingredients</h2>
+    <nav>
+        <% if(currentUser){%>
+        <a href="/recipe/add">select your recipe</a>
+        <a href="/recipe/index">View your recipe</a>
+        <a href="/recipe/add">select recipe/a>
+        <a href="/recipe/index">View recipe</a>
+        <a href="/auth/logout">Logout</a>
+        <% }  else { %>
+        <a href="/auth/signup">Signup</a>
+        <a href="/auth/signin">Login</a>
+        <% } %>
+    </nav>
+    <%- body %>
+    <footer>Express 2023</footer>
+</body>
+</html

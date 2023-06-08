@@ -6,15 +6,14 @@ const passport = require('./lib/passportConfig')
 
 // Get routes 
 const indexRoute = require('./routes/index')
-const phonesRoute = require('./routes/recipe')
-const shopsRoute = require('./routes/shops')
+// const recipeRoute = require('./routes/recipe')
 const authRoute = require('./routes/auth')
 
 //Initilize app
 const app = express()
 
 //Initilize port 
-const PORT = 4003
+const PORT = 4000
 
 
 //Use layouts 
@@ -38,7 +37,7 @@ app.use(session({
     secret:'This is secret', 
     saveUninitialized:true, 
     resave:false, 
-    cookie:{maxAge:864000000}
+    cookie:{maxAge:777000000}
 }))
 //Passport 
 app.use(passport.initialize())
@@ -52,8 +51,7 @@ app.use(function(req,res,next)
 })
 //Mount Routes
 app.use('/',indexRoute)
-app.use('/',recipeRoute)
-app.use('/',shopsRoute)
+// app.use('/',recipeRoute)
 app.use('/',authRoute)
 
 //Listen to server request 
@@ -62,7 +60,7 @@ app.listen(PORT,()=>{
 })
 
 // Connect database 
-mongoose.connect("mongodb://127.0.0.1:27017/flights")
+mongoose.connect("mongodb+srv://salman:group08@project02.wkhpqh8.mongodb.net/")
 .then(console.log("App connected to MongoDB"))
 .catch((e)=>{
     console.log(`An error occurred: ${e}`)
