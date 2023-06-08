@@ -1,3 +1,16 @@
-body {
-    background-color: purple;
+.layoutBody {
+    background-color: rgb(235, 233, 233);
+    margin: 0;
+}
+
+header {
+    background-color: rgb(56, 56, 56);
+    height: 70px;
+    color: azure;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.title {
+    display: flex;
 }
