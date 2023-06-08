@@ -1,6 +1,6 @@
 const { default: mongoose } = require('mongoose')
-const moongose = require('mongoose')
-const bcrypt = require('bcryptjs')
+const moongoose = require('mongoose')
+const bcrypt = require('bcrypt')
 
 const userSchema=mongoose.Schema({
     username:{type:String, required:true, unique:true, minLength:[2], maxLength:[15]},
