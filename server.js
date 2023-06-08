@@ -60,7 +60,7 @@ app.listen(PORT,()=>{
 })
 
 // Connect database 
-mongoose.connect("mongodb+srv://salman:group08@project02.wkhpqh8.mongodb.net/")
+mongoose.connect("mongodb+srv://salman:group08@project02.wkhpqh8.mongodb.net/LoveAtFirstBite")
 .then(console.log("App connected to MongoDB"))
 .catch((e)=>{
     console.log(`An error occurred: ${e}`)
