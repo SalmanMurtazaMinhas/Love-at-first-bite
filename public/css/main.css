@@ -5,12 +5,48 @@
 
 header {
     background-color: rgb(56, 56, 56);
-    height: 70px;
-    color: azure;
+    height: 100px;
+    color: rgb(253, 253, 253);
     display: flex;
     margin-bottom: 20px;
 }
 
 .title {
     display: flex;
+}
+
+.logo {
+    width: 270px;
+    height: 150px;
+    display: flex;
+    position: relative;
+    bottom: 20px;
+}
+
+.userName {
+    display: flex;
+    justify-content: end;
+    width: 100vw;
+    position: relative;
+    left: 190px;
+    top: 5px;
+}
+
+.signupButton, .loginButton, .logoutButton {
+    color: antiquewhite;
+    text-decoration: none;
+}
+.authNav , .logoutButton {
+    display: flex;
+    width: 200px;
+    height: 30px;
+    position: relative;
+    justify-content: space-around;
+    top: 35px;
+    right: 40px;
+}
+
+.logoutButton {
+    top: 55px;
+    right: 25px;
 }
