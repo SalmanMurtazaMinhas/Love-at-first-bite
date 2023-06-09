@@ -7,8 +7,12 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <title>recipe_ingredients layout</title>
 </head>
-<body class="content">
-    <h2>Welcome to Express recipe_ingredients</h2>
+<body class="content layoutBody">
+    <header>
+        <h2 class="title">Love At First Bite</h2>
+        <h2 class="userName"><%= currentUser?.username%></h2>
+    </header>
+    
     <nav>
         <% if(currentUser){%>
         <a href="/recipe/add">select your recipe</a>

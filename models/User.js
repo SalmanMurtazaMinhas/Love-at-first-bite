@@ -1,9 +1,8 @@
-const { default: mongoose } = require('mongoose')
-const moongoose = require('mongoose')
+const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
 const userSchema=mongoose.Schema({
-    username:{type:String, required:true, unique:true, minLength:[2], maxLength:[15]},
+    username:{type:String, required:true, minLength:[2], maxLength:[15]},
     email:{type:String, required:true},
     password:{type:String, required:true}
 },
@@ -11,12 +10,11 @@ const userSchema=mongoose.Schema({
     timestamps: true
 })
 
-userSchema.methods.verifyPassword = function(password)
-{
-    //console.log('Verify Password',password)
-    return bcrypt.compareSync(password,this.password)
+userSchema.methods.verifyPassword = function(password){
+    console.log('Verifying Password: ', password)
+    return bcrypt.compareSync(password, this.password)
 }
 
-const userModel = mongoose.model('User',userSchema)
+const User = mongoose.model('User', userSchema)
 
-module.exports = userModel
+module.exports = User

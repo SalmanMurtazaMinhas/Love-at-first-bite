@@ -39,6 +39,6 @@ exports.auth_logout_get = (req, res, next) => {
         if (err) {
             return next()
         }
-        res.redirect('/auth/signin')
+        res.redirect('/')
     })
 }
