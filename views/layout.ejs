@@ -9,9 +9,22 @@
 </head>
 <body class="content layoutBody">
     <header>
-        <h2 class="title">Love At First Bite</h2>
+        <!-- <h2 class="title">Love At First Bite</h2> -->
+        <img class="logo" src="/image/Love-at-first-site-logo.png" alt="">
         <h2 class="userName"><%= currentUser?.username%></h2>
+
+        <% if(currentUser){%>
+            <a href="/auth/logout" class="logoutButton">Logout</a>
+            <% } %>
+
+        <nav class="authNav">
+            <% if(!currentUser){%>
+                <a href="/auth/signup" class="signupButton">Signup</a>
+                <a href="/auth/signin" class="loginButton">Login</a>
+                <% } %>
+        </nav>
     </header>
+
     
     <nav>
         <% if(currentUser){%>
@@ -19,10 +32,7 @@
         <a href="/recipe/index">View your recipe</a>
         <a href="/recipe/add">select recipe/a>
         <a href="/recipe/index">View recipe</a>
-        <a href="/auth/logout">Logout</a>
-        <% }  else { %>
-        <a href="/auth/signup">Signup</a>
-        <a href="/auth/signin">Login</a>
+        
         <% } %>
     </nav>
     <%- body %>
