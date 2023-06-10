@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script src="/js/layout.js" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <title>recipe_ingredients layout</title>
 </head>
 <body class="content layoutBody">
@@ -12,8 +14,9 @@
         <!-- <h2 class="title">Love At First Bite</h2> -->
         <img class="logo" src="/image/Love-at-first-site-logo.png" alt="">
         <h2 class="userName"><%= currentUser?.username%></h2>
-
+        
         <% if(currentUser){%>
+            <iconify-icon icon="mdi:chef-hat" style="color: #e6bb9b;" width="50" height="50" class="hatIcon"></iconify-icon>
             <a href="/auth/logout" class="logoutButton">Logout</a>
             <% } %>
 
@@ -23,10 +26,30 @@
                 <a href="/auth/signin" class="loginButton">Login</a>
                 <% } %>
         </nav>
+
+        <nav class="navContainer">
+            <ul class="navBar">
+                <li><a href="#">Breakfast</a></li>
+                <li><a href="#">Lunch</a></li>
+                <li><a href="#">Dinner</a></li>
+                <li><a href="#">Dessert</a></li>
+                <% if(currentUser){%>
+                    <!-- <a href="/recipe/add">Chef Access</a> -->
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Chef Access</a>
+                        <div class="dropdown-content">
+                          <a href="#">Add Recipe</a>
+                          <a href="#">My Recipes</a>
+                          <!-- <a href="#">Link 3</a> -->
+                        </div>
+                      </li>
+                    <% } %>
+            </ul>
+        </nav>
     </header>
 
     
-    <nav>
+    <!-- <nav>
         <% if(currentUser){%>
         <a href="/recipe/add">select your recipe</a>
         <a href="/recipe/index">View your recipe</a>
@@ -34,8 +57,11 @@
         <a href="/recipe/index">View recipe</a>
         
         <% } %>
-    </nav>
-    <%- body %>
+    </nav> -->
+    <main>
+
+        <%- body %>
+    </main>
     <footer>Express 2023</footer>
 </body>
 </html
