@@ -4,14 +4,18 @@ const mongoose = require('mongoose')
 
 const recipeSechema = mongoose.Schema({
      title : String,
-    recipe : String,
-    type : String,
-    discreption : String,
-    numberOfCaloires : Number
-})
-
-const recipe = mongoose.model('recipe', recipeSechema)
-
+     discreption : String,
+     type :[{
+         type: mongoose.Schema.Types.ObjectId,  
+         ref: 'category'
+         }] ,
+   
+     recipe : String,
+     numberOfCaloires : Number
+    })
+    
+    const recipe = mongoose.model('recipe', recipeSechema)
+    
 
 //Exporting the model 
 module.exports = recipe
