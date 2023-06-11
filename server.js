@@ -6,7 +6,7 @@ const passport = require('./lib/passportConfig')
 
 // Get routes 
 const indexRoute = require('./routes/index')
-// const recipeRoute = require('./routes/recipe')
+const recipeRoute = require('./routes/recipe')
 const authRoute = require('./routes/auth')
 
 //Initilize app
@@ -51,7 +51,7 @@ app.use(function(req,res,next)
 })
 //Mount Routes
 app.use('/',indexRoute)
-// app.use('/',recipeRoute)
+app.use('/',recipeRoute)
 app.use('/',authRoute)
 
 //Listen to server request 
