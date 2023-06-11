@@ -3,7 +3,7 @@ const Recipe = require('../models/recipe')
 
 exports.recipe_add_get = async(req,res)=>{
     // const place = await user.find()
-    res.render('recipe/add', {recipe})
+    res.render('recipe/add', {Recipe})
 }
 
 exports.recipe_add_post = (req,res)=>{
