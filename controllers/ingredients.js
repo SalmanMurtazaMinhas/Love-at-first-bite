@@ -1,4 +1,4 @@
-// const Shop = require("../models/place")
+// const Shop = require("../routes//recipe")
 
 // exports.shops_add_get = (req,res)=>{
 //     res.render('recipe/add')
@@ -9,8 +9,8 @@
 //     {
 //         const recipe = new recipe(req.body)
 //         await recipe.save()
-//         console.log('Payment Done!')
-//         return res.redirect('/places/add')
+//         console.log('recipe added')
+//         return res.redirect('/recipe/add')
 //     }
 //     catch(e)
 //     {
@@ -21,8 +21,8 @@
 // exports.airports_index_get = async (req,res)=>{
 //     try
 //     {
-//         const shops = await Shop.find()
-//         return res.render('places/index', {shops})
+//         const recipe = await Shop.find()
+//         return res.render('recipe/index', {recipe})
 //     }
 //     catch(e)
 //     {
