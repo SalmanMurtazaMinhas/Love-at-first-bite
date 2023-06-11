@@ -8,6 +8,7 @@ const passport = require('./lib/passportConfig')
 const indexRoute = require('./routes/index')
 const recipeRoute = require('./routes/recipe')
 const authRoute = require('./routes/auth')
+const categoryRoute = require('./routes/category')
 
 //Initilize app
 const app = express()
@@ -53,6 +54,7 @@ app.use(function(req,res,next)
 app.use('/',indexRoute)
 app.use('/',recipeRoute)
 app.use('/',authRoute)
+app.use('/',categoryRoute)
 
 //Listen to server request 
 app.listen(PORT,()=>{
