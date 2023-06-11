@@ -1,9 +1,11 @@
 const Recipe = require('../models/recipe')
 // const user = require('../routes/recipe')
+const Category = require('../models/category')
+
 
 exports.recipe_add_get = async(req,res)=>{
-    // const place = await user.find()
-    res.render('recipe/add', {Recipe})
+    const category = await Category.find()
+    res.render('recipe/add', {category})
 }
 
 exports.recipe_add_post = (req,res)=>{

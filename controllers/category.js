@@ -2,8 +2,8 @@ const Category = require('../models/category')
 // const user = require('../routes/recipe')
 
 exports.category_add_get = async(req,res)=>{
-    // const place = await user.find()
-    res.render('category/add', {Category})
+    const category = await Category.find()
+    res.render('category/add', {category})
 }
 
 exports.category_add_post = (req,res)=>{
@@ -15,3 +15,12 @@ exports.category_add_post = (req,res)=>{
         console.log(e)
     })
 }
+
+// exports.category_index_get = async (req, res) => {
+//     try {
+//         const categorys = await Category.find()
+//         res.render('category/index', {categorys})
+//     } catch (error){
+//         console.log(error.message)
+//     }
+// }

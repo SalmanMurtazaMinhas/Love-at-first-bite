@@ -21,8 +21,12 @@ numberOfCaloires : numbder -->
     </div>
 
     <div>
-        <label >type</label>
-        <input type="food" name="food_name">
+        <label>category</label>
+        <select name="category">
+            <% category.forEach(function(category){%>
+                <option value="<%= category._id %>"><%= category.name %></option>
+            <% }) %>
+        </select>
     </div>
     
     <div>
