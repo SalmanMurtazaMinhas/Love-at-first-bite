@@ -5,10 +5,10 @@ const mongoose = require('mongoose')
 const recipeSechema = mongoose.Schema({
      title : String,
      discreption : String,
-     type :[{
+     category :{
          type: mongoose.Schema.Types.ObjectId,  
          ref: 'category'
-         }] ,
+         } ,
    
      recipe : String,
      numberOfCaloires : Number
