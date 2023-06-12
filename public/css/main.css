@@ -101,6 +101,7 @@ header {
 a {
     color: #e6bb9b;
     text-decoration: none;
+    scale: 1.2;
 }
 
 a:hover {
@@ -157,4 +158,24 @@ a:hover {
   
   .dropdown:hover .dropdown-content {
     display: block;
+  }
+
+  .div1 {
+    background-color: aqua;
+  }
+
+  .div2 {
+    background-color: #f3725d;
+  }
+
+  .div3 {
+    background-color: darkgreen;
+  }
+
+  .div4 {
+    background-color: chartreuse;
+  }
+
+  .div5 {
+    background-color: #e6bb9b;
   }

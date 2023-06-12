@@ -17,15 +17,27 @@ exports.recipe_add_post = (req,res)=>{
         console.log(e)
     })
 }
-exports.recipe_get = async(req,res)=>{
-    //Create Api for show books in index
-    // const recipe = await recipe.find().populate('recipe_id')
-    
-    console.log(recipe)
 
-    //Render page of flights
-    res.render('recipe/index', {recipe})
-}
+exports.recipe_index_get = async (req, res) => {
+    try{
+        const recipes = await Recipe.find() //.populate('author')
+        console.log(recipes)
+        res.render('recipe/index', { recipes })
+        // res.render('book/index', { books: books }) //does the same thing
+    } catch (error) {
+        console.log(error.message)
+        res.send('HMMMMM Something is not right')
+    }}
+
+// exports.recipe_index_get = async (req,res)=>{
+//     //Create Api for show books in index
+//     const recipe = await Recipe.find().populate('Recipe_id')
+    
+//     console.log(Recipe)
+
+//     //Render page of flights
+//     res.render('recipe/index', {Recipe})
+// }
 
 // exports.recipe_delete_post = async (req,res)=>{
 //     try
