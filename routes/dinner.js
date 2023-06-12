@@ -1,5 +1,5 @@
 const express = require('express')
-const lunchController = require('../controllers/category')
+const dinnerController = require('../controllers/category')
 //router 
 const router = express.Router()
 
