@@ -9,6 +9,7 @@ const indexRoute = require('./routes/index')
 const recipeRoute = require('./routes/recipe')
 const authRoute = require('./routes/auth')
 const categoryRoute = require('./routes/category')
+const userRoute = require('./routes/user')
 
 //Initilize app
 const app = express()
@@ -55,6 +56,7 @@ app.use('/',indexRoute)
 app.use('/',recipeRoute)
 app.use('/',authRoute)
 app.use('/',categoryRoute)
+app.use('/', userRoute)
 
 //Listen to server request 
 app.listen(PORT,()=>{
