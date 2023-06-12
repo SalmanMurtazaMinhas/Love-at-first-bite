@@ -10,6 +10,10 @@ const recipeRoute = require('./routes/recipe')
 const authRoute = require('./routes/auth')
 const categoryRoute = require('./routes/category')
 const userRoute = require('./routes/user')
+const breakfastRoute = require('./routes/breakfast')
+const lunchRoute = require('./routes/lunch')
+const dinnerRoute = require('./routes/dinner')
+const dessertRoute = require('./routes/dessert')
 
 //Initilize app
 const app = express()
@@ -56,7 +60,12 @@ app.use('/',indexRoute)
 app.use('/',recipeRoute)
 app.use('/',authRoute)
 app.use('/',categoryRoute)
+
 app.use('/', userRoute)
+
+app.use('/',breakfastRoute)
+app.use('/',lunchRoute)
+app.use('/',dessertRoute)
 
 //Listen to server request 
 app.listen(PORT,()=>{
