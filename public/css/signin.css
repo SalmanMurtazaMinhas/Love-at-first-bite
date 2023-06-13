@@ -1,0 +1,60 @@
+body {
+    /* background-color: aqua; */
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('/image/food-background.jpg');
+    /* filter: brightness(40%); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    color:rgb(230,187,155);
+    margin-bottom: 20px;
+  }
+
+  .formContainer {
+    background-color: rgba(0, 0, 0, 0.20);
+    padding: 20px;
+    padding-bottom: 13px;
+    border-radius: 15px;
+  
+    width: 500px;
+    margin: 0 auto;
+    color: rgba(222, 222, 222, 0.751);
+  }
+
+  div {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .signinFormButton {
+    padding: 10px 30px;
+    /* display: flex; */
+    /* margin: 9px; */
+    border-radius: 10px;
+    background-color: rgb(56, 56, 56);
+    color: #e6bb9b;
+    font-family: 'Caveat', cursive;
+    font-size: 17px;
+  }
+
+  .signinFormButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  }
+
+  .input {
+    border-radius: 10px;
+    height: 20px;
+    width: 60%;
+    margin-left: 10px;
+  }
