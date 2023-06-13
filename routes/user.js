@@ -1,7 +1,11 @@
 const express = require('express')
-const userController = require('../controllers/user')
- 
+
 const router = express.Router()
+const bcrypt = require('bcrypt')
+
+const userController = require('../controllers/user')
+router.get('/user/changepassword', userController.user_changepassword_get)
+router.post('/user/changepassword', userController.user_changepassword_post)
 
 router.get('/user/index',userController.user_index_get)
 
