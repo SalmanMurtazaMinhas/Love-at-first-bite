@@ -1,30 +1,60 @@
-
-h2{
-    color:white;
-    text-align: center;
-    font-size:30px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
-
 body {
-    background-color: rgb(121, 200, 243);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- 
-}
+    /* background-color: aqua; */
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('/image/food-background.jpg');
+    /* filter: brightness(40%); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+  }
 
-.signUpForm{
-    box-sizing: border-box;
-   padding: 20px;
-    border-radius: 1rem;
-   text-align: center;
-   margin: auto;
+  h2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    color:rgb(230,187,155);
+    margin-bottom: 20px;
+  }
 
-}
+  .formContainer {
+    background-color: rgba(0, 0, 0, 0.20);
+    padding: 20px;
+    padding-bottom: 13px;
+    border-radius: 15px;
+  
+    width: 500px;
+    margin: 0 auto;
+    color: rgba(222, 222, 222, 0.751);
+  }
 
-.submit{
-    background-color:  rgb(121, 200, 243);
-    border: 3px solid white;
-    width:200px;
-    height:60px;
-    font-size:40px;
-}
+  div {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .signupFormButton {
+    padding: 10px 30px;
+    /* display: flex; */
+    /* margin: 9px; */
+    border-radius: 10px;
+    background-color: rgb(56, 56, 56);
+    color: #e6bb9b;
+    font-family: 'Caveat', cursive;
+    font-size: 17px;
+  }
+
+  .signupFormButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  }
+
+  .input {
+    border-radius: 10px;
+    height: 20px;
+    width: 60%;
+    margin-left: 10px;
+  }
