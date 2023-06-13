@@ -16,11 +16,3 @@ exports.category_add_post = (req,res)=>{
     })
 }
 
-// exports.category_index_get = async (req, res) => {
-//     try {
-//         const categorys = await Category.find()
-//         res.render('category/index', {categorys})
-//     } catch (error){
-//         console.log(error.message)
-//     }
-// }

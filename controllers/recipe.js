@@ -19,8 +19,13 @@ exports.recipe_add_post = (req,res)=>{
 }
 
 exports.recipe_index_get = async (req, res) => {
+    // req.query.id => dinner / breakfast/ lunch / dessert
+
     try{
-        const recipes = await Recipe.find() //.populate('author')
+
+        const id = await Category.find({name: req.query.id})
+        const recipes = await Recipe.find({category: id}).populate('category')
+
         console.log(recipes)
         res.render('recipe/index', { recipes })
         // res.render('book/index', { books: books }) //does the same thing
