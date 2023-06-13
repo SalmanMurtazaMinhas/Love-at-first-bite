@@ -15,7 +15,7 @@ exports.user_changepassword_post = async (req, res) => {
             const pass = req.body.newPassword.toString();
             const hash = bcrypt.hashSync(pass, 10)
             await User.findOneAndUpdate({emailAddress: req.body.emailAddress, password: hash})
-            res.redirect('/user/signin')
+            res.redirect('/auth/signin')
         } else {
             res.redirect('/');
         }
@@ -26,11 +26,11 @@ exports.user_changepassword_post = async (req, res) => {
     }
 }
 
-exports.user_index_get = async (req, res) => {
+exports.user_detail_get = async (req, res) => {
     try{
-        const users = await User.find()
-        console.log(users)
-        res.render('user/index', { users })
+        const user = await User.findById(req.query.id)
+        console.log(user)
+        res.render('user/detail', { user })
         
     } catch (error) {
         console.log(error.message)
