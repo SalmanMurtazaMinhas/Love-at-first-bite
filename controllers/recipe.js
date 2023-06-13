@@ -24,11 +24,16 @@ exports.recipe_index_get = async (req, res) => {
     try{
 
         const id = await Category.find({name: req.query.id})
-        const recipes = await Recipe.find({category: id}).populate('category')
 
-        console.log(recipes)
-        res.render('recipe/index', { recipes })
-        
+        if (req.query.id) {
+            const recipes = await Recipe.find({category: id}).populate('category')
+            res.render('recipe/index', { recipes })
+            } else {
+            const recipes = await Recipe.find()
+            res.render('recipe/index', { recipes })
+        }
+
+   
     } catch (error) {
         console.log(error.message)
         res.send('HMMMMM Something is not right')
@@ -66,6 +71,21 @@ console.log('recipe edit get Recipes: ', recipe)
             console.log(error.message)
         }
     }
+
+    exports.recipe_detail_get = async (req, res) => {
+        try{
+            const recipe = await Recipe.findById(req.query.id)
+            console.log(recipe)
+            res.render('recipe/detail', { Recipe })
+            
+        } catch (error) {
+            console.log(error.message)
+            res.send('HMMMMM Something is not right')
+        }}
+
+
+
+
 // exports.recipe_index_get = async (req,res)=>{
 //     //Create Api for show books in index
 //     const recipe = await Recipe.find().populate('Recipe_id')

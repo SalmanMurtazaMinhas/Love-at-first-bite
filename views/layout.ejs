@@ -13,7 +13,7 @@
     <header>
         <!-- <h2 class="title">Love At First Bite</h2> -->
         <img class="logo" src="/image/Love-at-first-site-logo.png" alt="">
-        <h2 class="userName"><%= currentUser?.username%></h2>
+        <a href="/user/detail?id=<%= currentUser?._id%>" class ="userName"><%= currentUser?.username%></a>
         
         <% if(currentUser){%>
             <iconify-icon icon="mdi:chef-hat" style="color: #e6bb9b;" width="50" height="50" class="hatIcon"></iconify-icon>
