@@ -42,3 +42,6 @@ exports.auth_logout_get = (req, res, next) => {
         res.redirect('/')
     })
 }
+
+
+
