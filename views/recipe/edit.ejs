@@ -1,27 +1,35 @@
-<h2>recipe List</h2>
-<form action="/recipes/view" method="post">
+<h3>Edit Recipe Form</h3>
+<!-- title: String,
+    author: String,
+    genre: String,
+    isFiction: Boolean,
+    numberOfPages: Number -->
+<form method="POST" action="/recipe/edit">
     <div>
-        <label >recipe name</label>
-        <input type="namerecipe_Name" value="<%= recipe.recipe_Name %>" name="recipe_Name">
+        <label>Title</label>
+        <input type="text" name="title" value="<%= recipe.title %>">
     </div>
-    <div>
-        <label >recipe</label>
-        <input type="namerecipe_Name" value="<%= recipe.name %>" name="name">
-    </div>
-    <div>
-        <label >recipe_Name</label>
-        <input type="text"  value="<%= recipe.recipe_Name %>" name="recipe_Name">
-    </div>
-    <div>
-        <label>recipe ID</label>
-        <select name="user_id">
-            <% users.forEach((k)=>{ var selected = ( k._id.equals(recipe.user_id) ) ? "selected" : ""; %>
-               <option value="<%=k._id%>" <%= selected %> ><%=k.user_id%></option>
-              <label><% k._id %></label>
-              <label><% recipe.user_id %></label>
-            <%}) %>
 
-           </select>
-    <input type="hidden" name="id" value="<%= recipe._id %>">
-    <input type="submit" value="UpGrade Your recipe">
+    <div>
+        <label>recipe</label>
+        <input type="text" name="recipe" value="<%= recipe.recipe %>">
+    </div>
+
+    <div>
+        <label>category</label>
+        <input type="text" name="category" value="<%= recipe.category %>">
+    </div>
+
+    <div>
+        <label>discreption</label>
+        <input type="text" name="discreption" value="<%= recipe.discreption %>">
+    </div>
+
+    <div>
+        <label>number Of Caloires</label>
+        <input type="text" name="numberOfCaloires" value="<%= recipe.numberOfCaloires %>">
+    </div>
+    <input type="hidden" name="id" value="<%=recipe._id%>">
+    <input type="submit">
 </form>
+

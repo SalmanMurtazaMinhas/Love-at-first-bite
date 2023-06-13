@@ -28,12 +28,44 @@ exports.recipe_index_get = async (req, res) => {
 
         console.log(recipes)
         res.render('recipe/index', { recipes })
-        // res.render('book/index', { books: books }) //does the same thing
+        
     } catch (error) {
         console.log(error.message)
         res.send('HMMMMM Something is not right')
     }}
 
+
+    // exports.recipe_edit_get = async (req, res) => {
+    //     try {
+    //         const recipe = await Recipe.findById(req.query.id)
+    //         res.render('recipe/edit', {recipe})
+    //     } catch (error) {
+    //         console.log(error.message)
+    //         res.send(error.message)
+    //     }
+    // }
+    
+    exports.recipe_edit_get = async (req, res) => {
+        try {
+            const recipe = await Recipe.findById(req.query.id)
+console.log('recipe edit get Recipes: ', recipe)
+    
+            res.render('recipe/edit', {recipe})
+        } catch (error) {
+            console.log(error.message)
+            res.send(error.message)
+        }
+    }
+    
+    exports.recipe_edit_post = async (req, res) => {
+        try {
+            console.log(req.body.id)
+            await Recipe.findByIdAndUpdate(req.body.id, req.body)
+            res.redirect('/recipe/index')
+        } catch (error) {
+            console.log(error.message)
+        }
+    }
 // exports.recipe_index_get = async (req,res)=>{
 //     //Create Api for show books in index
 //     const recipe = await Recipe.find().populate('Recipe_id')
