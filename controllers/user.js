@@ -36,3 +36,26 @@ exports.user_detail_get = async (req, res) => {
         console.log(error.message)
         res.send('HMMMMM Something is not right')
     }}
+
+
+    exports.user_edit_get = async (req, res) => {
+        try {
+            const user = await User.findById(req.query.id)
+console.log('User edit get Users: ', user)
+    
+            res.render('user/edit', {user})
+        } catch (error) {
+            console.log(error.message)
+            res.send(error.message)
+        }
+    }
+    
+    exports.user_edit_post = async (req, res) => {
+        try {
+            console.log(req.body.id)
+            await User.findByIdAndUpdate(req.body.id, req.body)
+            res.redirect('/')
+        } catch (error) {
+            console.log(error.message)
+        }
+    }

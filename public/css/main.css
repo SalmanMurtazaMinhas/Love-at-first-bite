@@ -21,6 +21,7 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s;
     width: 100vw;
+    font-family: 'Caveat', cursive;
 
 }
 
@@ -51,16 +52,26 @@ header {
 
 .userName {
     display: flex;
-    justify-content: end;
-    width: 100vw;
     position: relative;
-    left: 250px;
-    top: 5px;
+    right: 15px;
+    height: 30px;
+    width: 500px;
+    color: #f1f1f1;
+  }
+  
+  .usernameContainer {
+    display: flex;
+  width: 300px;
+  position: relative;
+  left: 63%;
+
 }
 
 .signupButton, .loginButton, .logoutButton {
     color: #e6bb9b;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
 }
 .authNav , .logoutButton {
     display: flex;
@@ -69,12 +80,12 @@ header {
     position: relative;
     justify-content: space-around;
     top: 35px;
-    right: 40px;
+    left: 700px;
 }
 
 .logoutButton {
     top: 55px;
-    right: 12px;
+    left: 32px;
     color: #e6bb9b;
 }
 
@@ -88,6 +99,7 @@ header {
     height: 30px;
     width: 100vw;
     padding: 0;
+    font-size: 20px;
 }
 
 .navContainer {
@@ -101,17 +113,22 @@ header {
 a {
     color: #e6bb9b;
     text-decoration: none;
+  }
+  
+  .navA:hover {
+    color: #f3725d;
     scale: 1.2;
 }
 
-a:hover {
-    color: #f3725d;
+.usernameContainer h2 a:hover {
+  scale: 1.0;
 }
 
 .hatIcon {
     position: relative;
     top: 10px;
     left: 25px;
+    
 }
 
 .titleVideo {
@@ -158,24 +175,4 @@ a:hover {
   
   .dropdown:hover .dropdown-content {
     display: block;
-  }
-
-  .div1 {
-    background-color: aqua;
-  }
-
-  .div2 {
-    background-color: #f3725d;
-  }
-
-  .div3 {
-    background-color: darkgreen;
-  }
-
-  .div4 {
-    background-color: chartreuse;
-  }
-
-  .div5 {
-    background-color: #e6bb9b;
   }

@@ -1,0 +1,25 @@
+<form method="POST" action="/user/edit">
+    <div>
+        <label>User Name</label>
+        <input type="text" name="username" value="<%= user.username %>">
+    </div>
+
+    <div>
+        <label>mobile</label>
+        <input type="text" name="mobile" value="<%= user.mobile %>">
+
+    </div>
+
+    <div>
+        <label>phone</label>
+        <input type="text" name="phone" value="<%= user.phone %>">
+
+    </div>
+
+    <div>
+        <label>adress</label> 
+        <input type="text" name ="adress" value="<%= user.adress %>"> 
+    </div>
+    <input type="hidden" name="id" value="<%=user._id%>">
+    <input type="submit">
+</form>
