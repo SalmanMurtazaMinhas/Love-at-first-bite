@@ -23,11 +23,8 @@ exports.recipe_index_get = async (req, res) => {
 
     try{
 
-        const recipes = await Recipe.find().populate('category')
-        const breakfast = await Recipe.find(breakfast).populate('category')
-        const lunch = await Recipe.find(lunch).populate('category')
-        const dinner = await Recipe.find(dinner).populate('category')
-        const dessert = await Recipe.find(dessert).populate('category')
+        const id = await Category.find({name: req.query.id})
+        const recipes = await Recipe.find({category: id}).populate('category')
 
         console.log(recipes)
         res.render('recipe/index', { recipes })
