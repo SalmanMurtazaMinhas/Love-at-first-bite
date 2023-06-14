@@ -135,9 +135,9 @@ console.log('recipe edit get Recipes: ', recipe)
 
     exports.recipe_detail_get = async (req, res) => {
         try{
-            const recipe = await Recipe.findById(req.query.id)
+            const recipe = await Recipe.findById(req.query.id).populate('category')
             console.log(recipe)
-            res.render('recipe/detail', { Recipe })
+            res.render('recipe/detail', { recipe })
             
         } catch (error) {
             console.log(error.message)
