@@ -20,7 +20,12 @@ exports.recipe_add_post = (req,res)=>{
     console.log(req.body.title)
 
     const recipe = new Recipe(req.body)
+
+    recipe.user = req.user._id
+    // const user = new User(req.user.id)
+
     recipe.image = "/uploads/" + req.file.filename;
+
     recipe.save().then(()=>{console.log('recipe taken!')
     res.redirect('/recipe/index')})
     .catch((e)=>{
@@ -52,6 +57,22 @@ exports.recipe_index_get = async (req, res) => {
         console.log(error.message)
         res.send('HMMMMM Something is not right')
     }}
+
+exports.recipe_myRecipe_get = async (req, res) => {
+        // req.query.id => dinner / breakfast/ lunch / dessert
+    
+        try{
+    
+        const recipes = await Recipe.find({user: req.user._id}).populate('category')
+        res.render('recipe/index', { recipes })
+                
+        } catch (error) {
+            console.log(error.message)
+            res.send('HMMMMM Something is not right')
+        }}
+
+
+    
 
 
 
