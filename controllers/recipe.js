@@ -13,6 +13,7 @@ exports.recipe_add_post = (req,res)=>{
     console.log(req)
     console.log(req.file)
     const recipe = new Recipe(req.body)
+    recipe.image = "/uploads/" + req.file.filename;
     recipe.save().then(()=>{console.log('recipe taken!')
     res.redirect('/recipe/index')})
     .catch((e)=>{

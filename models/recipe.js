@@ -12,7 +12,8 @@ const recipeSechema = mongoose.Schema({
          } ,
    
      recipe : String,
-     numberOfCaloires : Number
+     numberOfCaloires : Number,
+     image: String
     })
     
     const recipe = mongoose.model('recipe', recipeSechema)
