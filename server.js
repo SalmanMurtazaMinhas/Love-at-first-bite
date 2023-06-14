@@ -4,6 +4,7 @@ const expressLayouts = require('express-ejs-layouts')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
 
+
 // Get routes 
 const indexRoute = require('./routes/index')
 const recipeRoute = require('./routes/recipe')
@@ -69,6 +70,7 @@ app.use('/', userRoute)
 app.use('/',breakfastRoute)
 app.use('/',lunchRoute)
 app.use('/',dessertRoute)
+
 
 //Listen to server request 
 app.listen(PORT,()=>{

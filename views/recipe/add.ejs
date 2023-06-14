@@ -8,7 +8,7 @@ numberOfCaloires : numbder -->
 
 <h2>Add new recipe</h2>
 
-<form action="/recipe/add" method="post">
+<form action="/recipe/add" enctype="multipart/form-data" method="post">
     <div>
         <label >title</label>
         <input type="text" name="title">
@@ -34,11 +34,14 @@ numberOfCaloires : numbder -->
         <input type="text" name="discreption">
     </div>
 
-  
- 
     <div>
         <label>number of Caloires</label>
         <input type="text" name="numberOfCaloires"> 
+    </div>
+    
+    <div>
+        <label for="Upload a photo"></label>
+        <input type="file" class="form-control-file" name="uploadedFile">
     </div>
     <input type="submit" value="add your dish ">
 </form>
