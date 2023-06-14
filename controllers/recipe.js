@@ -9,6 +9,7 @@ exports.recipe_add_get = async(req,res)=>{
     res.render('recipe/add', {category})
 }
 
+
 exports.recipe_add_post = (req,res)=>{
     console.log(req)
     console.log(req.file)
