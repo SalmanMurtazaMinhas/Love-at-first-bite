@@ -7,38 +7,51 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <script src="/js/layout.js" defer></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <title>recipe_ingredients layout</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    
+    <title>Love At First Bite</title>
 </head>
 <body class="content layoutBody">
     <header>
         <!-- <h2 class="title">Love At First Bite</h2> -->
-        <img class="logo" src="/image/Love-at-first-site-logo.png" alt="">
-        <a href="/user/detail?id=<%= currentUser?._id%>" class ="userName"><%= currentUser?.username%></a>
+
+        <a href="/"><img class="logo" src="/image/Love-at-first-site-logo.png" alt=""></a>
         
-        <% if(currentUser){%>
-            <iconify-icon icon="mdi:chef-hat" style="color: #e6bb9b;" width="50" height="50" class="hatIcon"></iconify-icon>
-            <a href="/auth/logout" class="logoutButton">Logout</a>
-            <% } %>
+        
+        <div class="usernameContainer">
+
+            <% if(currentUser){%>
+                <iconify-icon icon="mdi:chef-hat" style="color: #e6bb9b;" width="50" height="50" class="hatIcon"></iconify-icon>
+                <a href="/auth/logout" class="logoutButton navA">Logout</a>
+                <% } %>
+            <h2 >
+                <a class ="userName navA" href="/user/detail?id=<%= currentUser?._id%>" ><%= currentUser?.username%></a>
+            </h2>
+            
+        </div>
 
         <nav class="authNav">
             <% if(!currentUser){%>
-                <a href="/auth/signup" class="signupButton">Signup</a>
-                <a href="/auth/signin" class="loginButton">Login</a>
+                <a href="/auth/signup" class="signupButton navA">Signup</a>
+                <a href="/auth/signin" class="loginButton navA">Login</a>
                 <% } %>
         </nav>
 
         <nav class="navContainer">
             <ul class="navBar">
-                <li><a href="/recipe/index?id=breakfast">Breakfast</a></li>
-                <li><a href="/recipe/index?id=lunch">Lunch</a></li>
-                <li><a href="/recipe/index?id=dinner">Dinner</a></li>
-                <li><a href="/recipe/index?id=dessert">Dessert</a></li>
+                <li><a href="/recipe/index?id=breakfast" class="navA">Breakfast</a></li>
+                <li><a href="/recipe/index?id=lunch" class="navA">Lunch</a></li>
+                <li><a href="/recipe/index?id=dinner" class="navA">Dinner</a></li>
+                <li><a href="/recipe/index?id=dessert" class="navA">Dessert</a></li>
                 <% if(currentUser){%>
                     <!-- <a href="/recipe/add">Chef Access</a> -->
                     <li class="dropdown">
-                        <a href="#" class="dropbtn">Chef Access</a>
+                        <a href="#" class="dropbtn navA">Chef Access</a>
                         <div class="dropdown-content">
-                          <a href="./recipe/add">Add Recipe</a>
+                          <a href="/recipe/add">Add Recipe</a>
                           <a href="#">My Recipes</a>
                           <!-- <a href="#">Link 3</a> -->
                         </div>

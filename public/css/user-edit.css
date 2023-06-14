@@ -36,7 +36,7 @@ body {
     font-size: 25px;
   }
 
-  .signupFormButton {
+  .proEditFormButton {
     padding: 10px 30px;
     /* display: flex; */
     /* margin: 9px; */
@@ -47,7 +47,7 @@ body {
     font-size: 17px;
   }
 
-  .signupFormButton:hover {
+  .proEditFormButton:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     
   }
@@ -57,4 +57,14 @@ body {
     height: 20px;
     width: 60%;
     margin-left: 10px;
+  }
+
+  .userName {
+    /* display: flex;
+    position: relative;
+    right: 15px; */
+    bottom: 14px;   
+    /* height: 30px;
+    width: 500px;
+    color: #f1f1f1; */
   }

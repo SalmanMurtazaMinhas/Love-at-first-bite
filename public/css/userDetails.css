@@ -1,0 +1,114 @@
+body {
+  /* background-color: aqua; */
+  background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('/image/food-background.jpg');
+  /* filter: brightness(40%); */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 25px;
+  color:rgb(230,187,155);
+}
+
+.profileContainer {
+  /* background-color: rgba(0, 0, 0, 0.20); */
+  padding: 20px;
+  padding-bottom: 150px;
+  border-radius: 15px;
+
+  width: 500px;
+  margin: 0 auto;
+}
+
+div {
+  color: rgba(222, 222, 222, 0.751);
+}
+
+.user-name , .user-email,  .user-phone, .user-mobile, .user-address{
+    /* background-color: aqua; */
+    display: flex;
+  }
+
+  /* .user-email {
+    background-color: #f3725d;
+  }
+
+  .user-phone {
+    background-color: darkgreen;
+  }
+
+  .user-mobile {
+    background-color: chartreuse;
+  }
+
+  .user-address {
+    background-color: #e6bb9b;
+  } */
+
+  /* #editProfileButton {
+    color: black;
+  } */
+
+  .pro {
+    height: 65px;
+  }
+
+  .userName {
+    font-size: 24px;
+      display: flex;
+      position: relative;
+      bottom: 3px;
+      right: 15px;
+      height: 30px;
+      width: 500px;
+      color: #f1f1f1;
+  }
+
+  .proHatIcon, .proEmailIcon, .proPhoneIcon, .proMobileIcon, .proAddressIcon {
+    position: relative;
+    top: 32px;
+    margin-right: 20px;
+  }
+
+  .proEmailIcon {
+    top: 29px;
+  }
+
+  .proPhoneIcon , .proMobileIcon, .proAddressIcon{
+    top: 25px;
+  }
+
+  
+
+  #editProfileButton {
+    padding: 10px 30px;
+    /* display: flex; */
+    margin: 9px;
+    border-radius: 10px;
+    background-color: rgb(56, 56, 56);
+    color: #e6bb9b;
+    font-family: 'Caveat', cursive;
+    font-size: 17px;
+  }
+
+  #editProfileButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    
+  }
+
+  #profileButtonContainer {
+  width: 34vw;
+  display: flex;
+  justify-content: flex-end;
+  /* position: relative; */
+  /* bottom: 10px; */
+  }

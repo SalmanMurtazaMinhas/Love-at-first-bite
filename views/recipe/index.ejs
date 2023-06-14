@@ -1,40 +1,53 @@
- <h3>Name of recipe</h3>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
- <!-- <table>
-    <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Genre</th>
-        <th>Fiction?</th>
-        <th>Pages</th>
-    </tr> -->
+    <link rel="stylesheet" href="/css/recipe-index.css">
+ </head>
+ <body>
+    
+     <h2>Name of recipe</h2>
+    
+  <div class="allRecipeDivCon">
 
-    <% recipes.forEach(function(recipe){ %>
-        <div class="div1">
-            
-            <h1>
-                <a href="/recipe/detail?id=<%= recipe._id %>">
-                    <%= recipe.title %></h1>
-                
-                </a>
-                
-        </div>
-        <div class="div2">
-            <h2><%= recipe.discreption %></h2>
-            
-        </div>
-        <div class="div3">
-            <h3><%= recipe.category.name %></h3>
-        </div>
-        <div class="div4">
-            <h4><%= recipe.recipe %></h4>
-            
-        </div>
-        <div class="div5">
-
-            <h5><%= recipe.numberOfCaloires %></h5>
-            
-        </div>
-        <a href="/recipe/edit?id=<%=recipe._id%>">UPDATE</a>
-        
-   <%  }) %>
+      <% recipes.forEach(function(recipe){ %>
+      <div class="allRecipeCon">
+     
+                 <div class="div1">
+                     
+                     <h1>
+                         <a href="/recipe/detail?id=<%= recipe._id %>">
+                             <%= recipe.title %></h1>
+                         
+                         </a>
+                         
+                 </div>
+         
+                 <!-- <div class="div2">
+                     <h2><%= recipe.discreption %></h2>
+                     
+                 </div>
+                 <div class="div3">
+                     <h3><%= recipe.category.name %></h3>
+                 </div>
+                 <div class="div4">  
+                     <h4><%= recipe.recipe %></h4>
+                     
+                 </div>
+                 <div class="div5">
+         
+                     <h5><%= recipe.numberOfCaloires %></h5>
+                     
+                 </div> -->
+     
+                 <a href="/recipe/edit?id=<%=recipe._id%>">UPDATE</a>
+                 
+             </div>
+             <%  }) %>
+  </div>   
+ </body>
+ </html>
+ 

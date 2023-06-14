@@ -1,38 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-<h2>Create New Account Here</h2>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
 
-<form method="POST" action = '/auth/signup'>
+    <h2>Create New Account Here</h2>
     
-    <div>
-        <label>User Name</label>
-        <input type="text" name="username">
-    </div>
+    <form method="POST" action = '/auth/signup' class="formContainer">
+        
+        <div class="div">
+            <label>User Name</label>
+            <input type="text" name="username" class="input">
+        </div>
+        
+        <div class="div">
+            <label>Email Address</label>
+            <input type="email" name="email" class="input">
+        </div>
+        
+        <div class="div">
+            <label>password</label>
+            <input type="password" name="password" class="input">
+        </div>
     
-    <div>
-        <label>Email Address</label>
-        <input type="email" name="email">
-    </div>
+        <div class="div">
+            <label>mobile</label>
+            <input type="text" name="mobile" class="input">
     
-    <div>
-        <label>password</label>
-        <input type="password" name="password">
-    </div>
-
-    <div>
-        <label>mobile</label>
-        <input type="text" name="mobile" >
-
-    </div>
-
-    <div>
-        <label>phone</label>
-        <input type="text" name="phone" >
-
-    </div>
-
-    <div>
-        <label>adress</label> 
-        <input type="text" name ="adress"> 
-    </div>
-    <input type="submit">
-</form>
+        </div>
+    
+        <div class="div">
+            <label>phone</label>
+            <input type="text" name="phone" class="input">
+    
+        </div>
+    
+        <div class="div">
+            <label>address</label> 
+            <input type="text" name ="adress" class="input"> 
+        </div>
+        <input type="submit" value="Signup" class="signupFormButton">
+    </form>
+</body>
+</html>

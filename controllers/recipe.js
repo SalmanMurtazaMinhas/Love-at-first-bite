@@ -1,6 +1,7 @@
 const Recipe = require('../models/recipe')
 // const user = require('../routes/recipe')
 const Category = require('../models/category')
+const multer = require("multer");
 
 
 exports.recipe_add_get = async(req,res)=>{
@@ -10,6 +11,7 @@ exports.recipe_add_get = async(req,res)=>{
 
 exports.recipe_add_post = (req,res)=>{
     console.log(req)
+    console.log(req.file)
     const recipe = new Recipe(req.body)
     recipe.save().then(()=>{console.log('recipe taken!')
     res.redirect('/recipe/index')})

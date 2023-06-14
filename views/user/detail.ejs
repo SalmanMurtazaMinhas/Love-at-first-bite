@@ -1,25 +1,49 @@
-<h3>My profile</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/userDetails.css">
+    
+</head>
+<body id="profileBody">
+    
+    <h3>My profile</h3>
+    
+       <div class="profileContainer">
 
-   
-       <div class="div1">
+           <div class="user-name pro">
+            <iconify-icon icon="mdi:chef-hat" style="color: #e6bb9b;" width="30" height="30" class="proHatIcon"></iconify-icon>
+               <h1><%= user.username %></h1>
+           </div>
+           <div class="user-email pro">
+            <iconify-icon icon="mdi:email" style="color: #e6bb9b;" width="30" height="30" class="proEmailIcon"></iconify-icon>
+               <h2><%= user.email %></h2>
+            
+           </div>
+           <div class="user-phone pro">
+            <iconify-icon icon="ic:baseline-phone" style="color: #e6bb9b;" width="30" height="30" class="proPhoneIcon"></iconify-icon>
+               <h2><%= user.phone %></h2>
+           </div>
+           <div class="user-mobile pro">
+            <iconify-icon icon="bi:phone-fill" style="color: #e6bb9b;" width="30" height="30" class="proMobileIcon"></iconify-icon>
+               <h2><%= user.mobile %></h2>
+               
+           </div>
+           <div class="user-address pro">
+            <iconify-icon icon="entypo:address" style="color: #e6bb9b;" width="30" height="30" class="proAddressIcon"></iconify-icon>
+               <h2><%= user.adress %></h2> 
+           </div>
+           <div id="profileButtonContainer">
+               <a href="/user/edit?id=<%= currentUser?._id%>"><input type="submit" value="Edit Profile" id="editProfileButton"></a>
+               <a href="/user/changepassword?id=<%= currentUser?._id%>"><input type="submit" value="Change Password" id="editProfileButton"></a>
+           </div>
            
-           <h1><%= user.name %></h1>
        </div>
-       <div class="div2">
-           <h2><%= user.email %></h2>
-        
-       </div>
-       <div class="div3">
-           <h2><%= user.phone %></h2>
-       </div>
-       <div class="div4">
-           <h2><%= user.mobile %></h2>recipe %></h2>
-           
-       </div>
-       <div class="div5">
+</body>
+</html>
 
-           <h2><%= user.adress %></h2> 
-       </div>
  
 
   
