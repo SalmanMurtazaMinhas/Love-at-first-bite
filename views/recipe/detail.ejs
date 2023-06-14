@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
 
-   <link rel="stylesheet" href="/css/recipe-index.css">
+   <link rel="stylesheet" href="/css/recipe-detail.css">
 </head>
 <body>
    
@@ -13,44 +13,39 @@
    
  <div class="allRecipeDivCon">
 
-     <% recipes.forEach(function(recipe){ %>
      <div class="allRecipeCon">
-    
+        
+        <div class="foodImgDiv">
+            <img src="..<%= recipe.image %>" class="foodImg">
+        </div>
+
+
                 <div class="div1">
-                    
-                    <h1>
-                        <a href="/recipes/detail?id=<%= recipes._id %>">
-                            <%= recipes.title %></h1>
-                        
-                        </a>
-                        
+
+                    <h1><%= recipe.title %></h1>
+                         
                 </div>
 
-
-
-
-        
                  <div class="div2">
-                    <h2><%= recipes.discreption %></h2>
+                    <h2><%= recipe.discreption %></h2>
                     
                 </div>
                 <div class="div3">
-                    <h3><%= recipes.category.name %></h3>
+                    <h3><%= recipe.category.name %></h3>
                 </div>
-                <div class="div4">  
-                    <h4><%= recipes.recipes %></h4>
+                <div class="div4" dangerouslySetInnerHTML={{__html: mDBData}}>  
+                    <h4><%= recipe.recipe %></h4>
                     
                 </div>
                 <div class="div5">
         
-                    <h5><%= recipes.numberOfCaloires %></h5>
+                    <h5><%= recipe.numberOfCaloires %></h5>
                     
                 </div>
     
-                <a href="/recipes/edit?id=<%=recipes._id%>">UPDATE</a>
+                <a href="/recipe/edit?id=<%=recipe._id%>">UPDATE</a>
                 
             </div>
-            <%  }) %>
  </div>   
 </body>
 </html>
