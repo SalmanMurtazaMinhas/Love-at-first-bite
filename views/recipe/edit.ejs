@@ -17,7 +17,7 @@
 
     <div>
         <label>category</label>
-        <input type="text" name="category" value="<%= recipe.category %>">
+        <input type="text" name="category" value="<%= recipe.category.name %>">
     </div>
 
     <div>
@@ -32,4 +32,3 @@
     <input type="hidden" name="id" value="<%=recipe._id%>">
     <input type="submit">
 </form>
-

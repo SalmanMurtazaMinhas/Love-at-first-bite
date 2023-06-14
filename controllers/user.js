@@ -11,6 +11,8 @@ exports.user_changepassword_post = async (req, res) => {
     try {
         const newPassword = req.body.newPassword
         const confirmPassword = req.body.confirmPassword
+        const currentPassword = req.body.password
+        
         if(newPassword === confirmPassword) {
             const pass = req.body.newPassword.toString();
             const hash = bcrypt.hashSync(pass, 10)
