@@ -186,6 +186,6 @@ a {
 
   .searchbar:focus {
     width: 60%;
-    /* background-color: lightblue; */
+    background-color: lightblue;
 
   }
