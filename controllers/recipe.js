@@ -12,6 +12,13 @@ exports.recipe_add_get = async(req,res)=>{
 exports.recipe_add_post = (req,res)=>{
     console.log(req)
     console.log(req.file)
+
+    const str1 = req.body.title
+    str1.toLowerCase()
+    const str2 = str1.charAt(0).toUpperCase()+ str1.slice(1)
+    req.body.title = str2 
+    console.log(req.body.title)
+
     const recipe = new Recipe(req.body)
     recipe.save().then(()=>{console.log('recipe taken!')
     res.redirect('/recipe/index')})
@@ -30,6 +37,10 @@ exports.recipe_index_get = async (req, res) => {
         if (req.query.id) {
             const recipes = await Recipe.find({category: id}).populate('category')
             res.render('recipe/index', { recipes })
+            } else if (req.query.recipetitle) {
+                const recipes = await Recipe.find({title: req.query.recipetitle}).populate('category')
+            
+                
             } else {
             const recipes = await Recipe.find()
             res.render('recipe/index', { recipes })
@@ -40,6 +51,32 @@ exports.recipe_index_get = async (req, res) => {
         console.log(error.message)
         res.send('HMMMMM Something is not right')
     }}
+
+
+
+
+    exports.recipe_index_post = async (req, res) => {
+        try{
+            const str1 = req.body.title
+            str1.toLowerCase()
+            const str2 = str1.charAt(0).toUpperCase()+ str1.slice(1)
+            req.body.title = str2 
+            console.log(req.body.title)
+    
+            const recipes = await Recipe.find({title: req.body.title})
+
+            if ('title' in recipes[0]) {
+                console.log(recipes)
+                res.render('recipe/index', { recipes })
+        
+            } else {
+                // append message saying "can't find recipe", use dom manipulation
+            }
+    
+        } catch (error) {
+            console.log(error.message)
+            res.send('HMMMMM Something is not right')
+        }}
 
 
     // exports.recipe_edit_get = async (req, res) => {

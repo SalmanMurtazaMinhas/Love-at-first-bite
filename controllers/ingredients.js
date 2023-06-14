@@ -1,4 +1,4 @@
-// const Shop = require("../routes//recipe")
+// const user = require("../routes//recipe")
 
 // exports.shops_add_get = (req,res)=>{
 //     res.render('recipe/add')

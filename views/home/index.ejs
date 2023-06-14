@@ -11,7 +11,17 @@
 <body>
     <video src="/videos/title-video.mp4" autoplay muted loop class="titleVideo"></video>
 
-    <input type="text" class="searchbar">
+   <form action="/recipe/index" method="post"> 
+    <div class="input-group">
+        <div class="form-outline">
+          <input type="search" id="form1" name="title" class="form-control" />
+          <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-search"></i>Search
+        </button>
+      </div>
+   </form>
 
     <h2>Heading</h2>
     <img src="https://picsum.photos/1500/300?random=1">
