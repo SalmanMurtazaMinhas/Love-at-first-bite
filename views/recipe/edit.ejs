@@ -1,35 +1,46 @@
-<h3>Edit Recipe Form</h3>
-<!-- title: String,
-    author: String,
-    genre: String,
-    isFiction: Boolean,
-    numberOfPages: Number -->
-<form method="POST" action="/recipe/edit">
-    <div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/recipe-edit.css">
+</head>
+<body>
+    <h2>Edit Recipe</h2>
+
+<form method="POST" action="/recipe/edit" class="formContainer">
+    <div class="div">
         <label>Title</label>
-        <input type="text" name="title" value="<%= recipe.title %>">
+        <input type="text" name="title" value="<%= recipe.title %>" class="input">
     </div>
 
-    <div>
-        <label>recipe</label>
-        <!-- <input type="text" name="recipe" value="<%= recipe.recipe %>"> -->
-        <textarea name="recipe" class="input inputRecipe" ><%= recipe.recipe %></textarea>
-    </div>
+    
 
     <!-- <div>
         <label>category</label>
         <input type="text" name="category" value="<%= recipe.category.name %>">
     </div> -->
 
-    <div>
+    <div class="div">
         <label>discreption</label>
-        <input type="text" name="discreption" value="<%= recipe.discreption %>">
+        <input type="text" name="discreption" value="<%= recipe.discreption %>" class="input">
     </div>
 
-    <div>
+    <div class="div">
         <label>number Of Caloires</label>
-        <input type="text" name="numberOfCaloires" value="<%= recipe.numberOfCaloires %>">
+        <input type="text" name="numberOfCaloires" value="<%= recipe.numberOfCaloires %>" class="input">
+    </div>
+
+    <div class="div">
+        <label>recipe</label>
+        <!-- <input type="text" name="recipe" value="<%= recipe.recipe %>"> -->
+        <textarea name="recipe" class="input inputRecipe" ><%= recipe.recipe %></textarea>
     </div>
     <input type="hidden" name="id" value="<%=recipe._id%>">
-    <input type="submit">
+    <input type="submit" class="recipeFormButton">
 </form>
+</body>
+</html>
+
+

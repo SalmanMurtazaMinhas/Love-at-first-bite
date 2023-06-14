@@ -272,3 +272,8 @@ a {
     font-family: 'Caveat', cursive;
     font-size: 25px;
   }
+
+  footer {
+    background-color: rgb(30, 30, 30);
+    height: 150px;
+  }

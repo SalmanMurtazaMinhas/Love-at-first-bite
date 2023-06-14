@@ -1,6 +1,6 @@
 body {
     /* background-color: aqua; */
-    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('/image/food-background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url('/image/pexels-cats-coming-1907227.jpg');
     /* filter: brightness(40%); */
     background-size: cover;
     background-position: center;
@@ -57,4 +57,7 @@ body {
     height: 20px;
     width: 60%;
     margin-left: 10px;
+  }
+  footer {
+    height: 0;
   }
