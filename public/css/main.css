@@ -176,3 +176,16 @@ a {
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  .searchbar {
+    transition: width 0.4s ease-in-out;
+    display: flex;
+    margin: 0 auto;
+    height: 30px;
+  }
+
+  .searchbar:focus {
+    width: 60%;
+    /* background-color: lightblue; */
+
+  }

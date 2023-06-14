@@ -1,25 +1,40 @@
-<form method="POST" action="/user/edit">
-    <div>
-        <label>User Name</label>
-        <input type="text" name="username" value="<%= user.username %>">
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-    <div>
-        <label>mobile</label>
-        <input type="text" name="mobile" value="<%= user.mobile %>">
-
-    </div>
-
-    <div>
-        <label>phone</label>
-        <input type="text" name="phone" value="<%= user.phone %>">
-
-    </div>
-
-    <div>
-        <label>adress</label> 
-        <input type="text" name ="adress" value="<%= user.adress %>"> 
-    </div>
-    <input type="hidden" name="id" value="<%=user._id%>">
-    <input type="submit">
-</form>
+    <link rel="stylesheet" href="/css/user-edit.css">
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    
+    </html>
+    
+    <form method="POST" action="/user/edit" class="formContainer">
+        <div class="div">
+            <label>User Name</label>
+            <input type="text" name="username" value="<%= user.username %>" class="input">
+        </div>
+    
+        <div class="div">
+            <label>mobile</label>
+            <input type="text" name="mobile" value="<%= user.mobile %>" class="input">
+    
+        </div>
+    
+        <div class="div">
+            <label>phone</label>
+            <input type="text" name="phone" value="<%= user.phone %>" class="input">
+    
+        </div>
+    
+        <div class="div">
+            <label>adress</label> 
+            <input type="text" name ="adress" value="<%= user.adress %>" class="input"> 
+        </div>
+        <input type="hidden" name="id" value="<%=user._id%>">
+        <input type="submit" value="Confirm" class="proEditFormButton">
+    </form>
+</body>

@@ -1,52 +1,57 @@
-<!-- title : string,
-recipe : string,
-type : string,
-discreption : string,
-numberOfCaloires : numbder -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-
-
-<h2>Add new recipe</h2>
-
-<form action="/recipe/add" enctype="multipart/form-data" method="post">
-    <div>
-        <label >title</label>
-        <input type="text" name="title">
-    </div>
-   
-
-    <div>
-        <label >recipe</label>
-        <input type="text" name="recipe">
-    </div>
-
-    <div>
-        <label>category</label>
-        <select name="category">
-            <% category.forEach(function(category){%>
-                <option value="<%= category._id %>"><%= category.name %></option>
-            <% }) %>
-        </select>
-    </div>
+    <link rel="stylesheet" href="/css/recipe-add.css">
+</head>
+<body>
     
-    <div>
-        <label>discreption</label>
-        <input type="text" name="discreption">
-    </div>
+    </html>
 
-    <div>
-        <label>number of Caloires</label>
-        <input type="text" name="numberOfCaloires"> 
-    </div>
+    <h2>Add new recipe</h2>
     
-    <div>
-        <label for="Upload a photo"></label>
-        <input type="file" class="form-control-file" name="uploadedFile">
-    </div>
-    <input type="submit" value="add your dish ">
-</form>
-<!-- title : String,
-recipe : String,
-type : String,
-discreption : String,
-numberOfCaloires : Number -->
+    <form action="/recipe/add" enctype="multipart/form-data" method="post" class="formContainer">
+        <div class="div">
+            <label >title</label>
+            <input type="text" name="title" class="input">
+        </div>
+       
+        <div class="div">
+            <label>discreption</label>
+            <input type="text" name="discreption" class="input">
+        </div>
+    
+        <div class="div">
+            <label>category</label>
+            <select name="category"  class="input">
+                <% category.forEach(function(category){%>
+                    <option value="<%= category._id %>"><%= category.name %></option>
+                <% }) %>
+            </select>
+        </div>
+        
+        <div class="div">
+            <label>number of Caloires</label>
+            <input type="text" name="numberOfCaloires" class="input"> 
+        </div>
+
+        <div class="div">
+            <label >recipe</label>
+            <input type="text" name="recipe" class="input inputRecipe">
+        </div>
+    
+        <div class="div">
+            <label for="Upload a photo"></label>
+            <input type="file" class="form-control-file" name="uploadedFile">
+        </div>
+        <input type="submit" value="add your dish " class="recipeFormButton">
+    </form>
+    <!-- title : String,
+    recipe : String,
+    type : String,
+    discreption : String,
+    numberOfCaloires : Number -->
+</body>
