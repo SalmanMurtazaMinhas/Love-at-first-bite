@@ -9,6 +9,7 @@ exports.recipe_add_get = async(req,res)=>{
     res.render('recipe/add', {category})
 }
 
+
 exports.recipe_add_post = (req,res)=>{
     console.log(req)
     console.log(req.file)
@@ -57,6 +58,7 @@ exports.recipe_index_get = async (req, res) => {
         console.log(error.message)
         res.send('HMMMMM Something is not right')
     }}
+    
 
 exports.recipe_myRecipe_get = async (req, res) => {
         // req.query.id => dinner / breakfast/ lunch / dessert
