@@ -36,11 +36,14 @@ const isLoggedIn = require('../lib/isLoggedIn')
 router.get('/recipe/add',recipeController.recipe_add_get)
 router.post('/recipe/add', upload.single('uploadedFile'), recipeController.recipe_add_post)
 router.get('/recipe/index',recipeController.recipe_index_get)
+router.get('/recipe/myRecipe',recipeController.recipe_myRecipe_get)
 
 router.get('/recipe/edit', recipeController.recipe_edit_get)
 router.post('/recipe/edit', recipeController.recipe_edit_post)
 
 router.get('/recipe/detail',recipeController.recipe_detail_get)
+
+
 // router.post('/recipe/detail',recipeController.recipe_detail_post)
 
 // router.post('/recipe/index',recipeController.recipe_delete_post)

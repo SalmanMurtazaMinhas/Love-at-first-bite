@@ -13,7 +13,8 @@ exports.recipe_add_post = (req,res)=>{
     console.log(req)
     console.log(req.file)
     const recipe = new Recipe(req.body)
-    const user = new User(req.user.id)
+    recipe.user = req.user._id
+    // const user = new User(req.user.id)
     recipe.save().then(()=>{console.log('recipe taken!')
     res.redirect('/recipe/index')})
     .catch((e)=>{
@@ -41,6 +42,22 @@ exports.recipe_index_get = async (req, res) => {
         console.log(error.message)
         res.send('HMMMMM Something is not right')
     }}
+
+exports.recipe_myRecipe_get = async (req, res) => {
+        // req.query.id => dinner / breakfast/ lunch / dessert
+    
+        try{
+    
+        const recipes = await Recipe.find({user: req.user._id}).populate('category')
+        res.render('recipe/index', { recipes })
+                
+        } catch (error) {
+            console.log(error.message)
+            res.send('HMMMMM Something is not right')
+        }}
+
+
+    
 
 
     // exports.recipe_edit_get = async (req, res) => {
