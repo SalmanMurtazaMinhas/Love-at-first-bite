@@ -41,8 +41,12 @@
                     <h5><%= recipe.numberOfCaloires %></h5>
                     
                 </div>
+
+                <% if(currentUser){%>
+                    <a href="/recipe/edit?id=<%=recipe._id%>">UPDATE</a>
+                    <% } %>
     
-                <a href="/recipe/edit?id=<%=recipe._id%>">UPDATE</a>
+                
                 
             </div>
  </div>   

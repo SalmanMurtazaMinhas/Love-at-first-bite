@@ -4,7 +4,7 @@
     /* width: 100vw; */
     max-width: 100%;
 
-    --nav-height: 140px;
+    --nav-height: 150px;
     
     padding-top: var(--nav-height);
 }
@@ -54,9 +54,11 @@ header {
     display: flex;
     position: relative;
     right: 15px;
+    bottom: 15px;
     height: 30px;
     width: 500px;
     color: #f1f1f1;
+    font-size: 30px;
   }
   
   .usernameContainer {
@@ -132,14 +134,15 @@ a {
 }
 
 .titleVideo {
-    width: 97.6vw;
-    height: 550px;
+    width: 100vw;
+    height: 85vh;
     object-fit: cover;
-    margin: 10px;
+    /* margin: 10px; */
     margin-right: 0;
     /* max-width: 100%; */
     position: relative;
     z-index: -1;
+    filter: brightness(55%);
 }
   
   li a, .dropbtn {
@@ -184,8 +187,88 @@ a {
     height: 30px;
   }
 
-  .searchbar:focus {
-    width: 60%;
-    background-color: lightblue;
+  .input-group , .qoute {
+    position: absolute;
+    bottom: 40%;
+    /* left: 40%; */
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 0 auto;
+  }
 
+  .search-input {
+    height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color:#e6bb9b;
+  padding-right: 40px;
+  color:#fff;
+  }
+
+  .search-input::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+
+  .btn-primary{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+
+  
+  .search-input:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+  .form-label {
+    position: relative;
+    right: 45px;
+    top: 8px;
+  }
+
+  .allRecipe {
+    margin-right: 30px;
+    background-color: #e6bb9b;
+    border-radius: 50px;
+    color: rgb(30, 30, 30);
+    padding: 5px 15px;
+
+
+  }
+
+  .qoute {
+    /* background-color: rgba(133, 133, 133, 0.158); */
+    bottom: 400px;
+    color: #f1f1f1;
+  }
+
+  #mainBody {
+    overflow: hidden;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
   }
