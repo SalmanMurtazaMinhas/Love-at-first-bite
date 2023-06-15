@@ -10,6 +10,11 @@ const recipeSechema = mongoose.Schema({
          type: mongoose.Schema.Types.ObjectId,  
          ref: 'category'
          } ,
+
+     user :{
+         type: mongoose.Schema.Types.ObjectId,  
+         ref: 'user'
+         } ,
    
      recipe : String,
      numberOfCaloires : Number,

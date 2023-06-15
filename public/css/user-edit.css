@@ -1,9 +1,9 @@
 body {
     /* background-color: aqua; */
-    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('/image/food-background.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('/image/pexels-craig-adderley-1631899.jpg');
     /* filter: brightness(40%); */
     background-size: cover;
-    background-position: center;
+    background-position: top;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
@@ -55,7 +55,7 @@ body {
   .input {
     border-radius: 10px;
     height: 20px;
-    width: 60%;
+    width: 100%;
     margin-left: 10px;
   }
 
@@ -67,4 +67,8 @@ body {
     /* height: 30px;
     width: 500px;
     color: #f1f1f1; */
+  }
+
+  footer {
+    height: 0;
   }
