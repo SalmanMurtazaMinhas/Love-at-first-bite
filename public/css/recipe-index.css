@@ -68,3 +68,7 @@
     object-fit: cover;
     /* border-radius: 20px; */
 }
+
+footer {
+height: 0;
+}
