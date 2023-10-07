@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const expressLayouts = require('express-ejs-layouts')
 const session = require('express-session')
 const passport = require('./lib/passportConfig')
+require('dotenv').config()
 
 
 // Get routes 
@@ -21,7 +22,7 @@ const dessertRoute = require('./routes/dessert')
 const app = express()
 
 //Initilize port 
-const PORT = 4000
+const PORT = process.env.PORT
 
 
 //Use layouts 
@@ -42,7 +43,7 @@ app.use(express.static('public'))
 
 //Session
 app.use(session({
-    secret:'This is secret', 
+    secret: process.env.SECRET, 
     saveUninitialized:true, 
     resave:false, 
     cookie:{maxAge:777000000}
@@ -78,7 +79,7 @@ app.listen(PORT,()=>{
 })
 
 // Connect database 
-mongoose.connect("mongodb+srv://salman:group08@project02.wkhpqh8.mongodb.net/LoveAtFirstBite")
+mongoose.connect(process.env.MONGO_URI)
 .then(console.log("App connected to MongoDB"))
 .catch((e)=>{
     console.log(`An error occurred: ${e}`)
