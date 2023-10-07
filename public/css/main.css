@@ -265,6 +265,8 @@ a {
     /* background-color: rgba(133, 133, 133, 0.158); */
     bottom: 500px;
     color: #f1f1f1;
+    z-index: -1;
+
   }
 
   #mainBody {

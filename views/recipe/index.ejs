@@ -18,7 +18,10 @@
       <div class="allRecipeCon">
      
           <div class="foodImgDiv">
-              <img src="..<%= recipe.image %>" class="foodImg">
+            <a href="/recipe/detail?id=<%= recipe._id %>" class="recipeName">
+                <img src="..<%= recipe.image %>" class="foodImg">
+            </a>
+              
           </div>
 
                  <div class="div1">
