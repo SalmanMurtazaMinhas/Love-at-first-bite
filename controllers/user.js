@@ -1,6 +1,6 @@
 
 const bcrypt = require('bcrypt')
-const User = require ('../models/user')
+const User = require ('../models/User')
 
 exports.user_changepassword_get = (req, res)=>{
     res.render("user/changepassword")
